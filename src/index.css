@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #10B981;
+  --color-brand-green-dark: #0D5C3A;
+  --color-brand-purple: #8B5CF6;
+  --color-brand-purple-dark: #581C87;
+  --color-brand-graphite: #18181B;
+  --color-brand-black: #09090B;
+  --color-brand-white: #FAFAFA;
+  --color-brand-accent: #10B981;
+
+  --font-heading: "Google Sans", sans-serif;
+  --font-body: "Google Sans", sans-serif;
+  --font-sans: "Google Sans", sans-serif;
+}
+
+* {
+  font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Google Sans", sans-serif;
+  background-color: #09090B;
+  color: #FAFAFA;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10B981;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at top center, rgba(16, 185, 129, 0.12) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
