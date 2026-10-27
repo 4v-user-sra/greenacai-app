@@ -1,10 +1,9 @@
 import React from 'react';
 import { Slide1Capa } from './components/slides/Slide1Capa';
-import { Slide3Diagnostico } from './components/slides/Slide3Diagnostico';
-import { Slide4AcaoImediata } from './components/slides/Slide4AcaoImediata';
-import { Slide5GoogleAds as SlideOtimizacaoCardapio } from './components/slides/Slide5GoogleAds';
-import { Slide6KommoCRM as SlideCriativosContingencia } from './components/slides/Slide6KommoCRM';
-import { Slide7Repescagem as SlideLagoEAtivacao } from './components/slides/Slide7Repescagem';
+import { SlidePerformanceTrafego } from './components/slides/SlidePerformanceTrafego';
+import { Slide5GoogleAds as SlideCardapioCampeoes } from './components/slides/Slide5GoogleAds';
+import { SlideDiretrizesCardapio } from './components/slides/SlideDiretrizesCardapio';
+import { Slide6KommoCRM as SlideCriativosPreco } from './components/slides/Slide6KommoCRM';
 import { Slide8ProximosPassos } from './components/slides/Slide8ProximosPassos';
 
 export default function App() {
@@ -19,32 +18,27 @@ export default function App() {
           <Slide1Capa />
         </section>
 
-        {/* Seção 2: Diagnóstico & Rebalizamento de Metas */}
-        <section id="diagnostico">
-          <Slide3Diagnostico />
+        {/* Seção 2: Performance Real de Tráfego & Funil do Cardápio (01/09 a 27/10) */}
+        <section id="performance-trafego">
+          <SlidePerformanceTrafego />
         </section>
 
-        {/* Seção 3: Decisão Imediata - Pausa do WhatsApp */}
-        <section id="acao-imediata">
-          <Slide4AcaoImediata />
+        {/* Seção 3: Otimização com Base nos Produtos Campeões de Venda (Saipos) */}
+        <section id="cardapio-campeoes">
+          <SlideCardapioCampeoes />
         </section>
 
-        {/* Seção 4: Otimização do Cardápio Digital (Saipos) */}
-        <section id="cardapio-digital">
-          <SlideOtimizacaoCardapio />
+        {/* Seção 4: Diretrizes Operacionais de Otimização do Cardápio Digital (Alinhamento WhatsApp) */}
+        <section id="diretrizes-cardapio">
+          <SlideDiretrizesCardapio />
         </section>
 
-        {/* Seção 5: Criativos com Preço & Contingência de Dias Frios */}
-        <section id="criativos-contingencia">
-          <SlideCriativosContingencia />
+        {/* Seção 5: Criativos Novos com Preço Estampado */}
+        <section id="criativos-novos">
+          <SlideCriativosPreco />
         </section>
 
-        {/* Seção 6: Ativação no Lago Igapó, Público Infantil e Arenas */}
-        <section id="ativacao-lago">
-          <SlideLagoEAtivacao />
-        </section>
-
-        {/* Seção 7: Planilha de Próximos Passos & Balizamento */}
+        {/* Seção 6: Planilha de Próximos Passos & Balizamento Alinhado */}
         <section id="proximos-passos">
           <Slide8ProximosPassos />
         </section>

@@ -11,8 +11,8 @@ interface SpeakerNotesModalProps {
 export function SpeakerNotesModal({ isOpen, onClose, currentSlide }: SpeakerNotesModalProps) {
   if (!isOpen) return null;
 
-  const currentTip = speakerNotesGuide.find(g => g.slide === currentSlide);
-  const currentSlideInfo = slidesList.find(s => s.id === currentSlide);
+  const currentTip = speakerNotesGuide.find(g => g.slide === currentSlide) || speakerNotesGuide[0];
+  const currentSlideInfo = slidesList.find(s => s.id === currentSlide) || slidesList[0];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in">
@@ -33,7 +33,7 @@ export function SpeakerNotesModal({ isOpen, onClose, currentSlide }: SpeakerNote
                 Guia de Pitch & Dicas de Ouro • Reunião com Taka e Viviane
               </h3>
               <p className="text-xs text-zinc-400">
-                Diretrizes de balizamento de expectativas e alinhamento de transição V4
+                Diretrizes de alinhamento com base nos dados reais do WhatsApp e Meta Ads
               </p>
             </div>
           </div>
@@ -52,7 +52,7 @@ export function SpeakerNotesModal({ isOpen, onClose, currentSlide }: SpeakerNote
             <div className="flex items-center justify-between gap-2 mb-2">
               <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
                 <HeartHandshake className="w-4 h-4" />
-                Dica para a Seção Atual ({currentSlide}/7): {currentSlideInfo?.title}
+                Dica de Pitch: {currentSlideInfo?.title}
               </span>
               <span className="text-[10px] bg-emerald-500 text-zinc-950 px-2.5 py-0.5 rounded-full font-extrabold">
                 Em Foco
@@ -73,37 +73,37 @@ export function SpeakerNotesModal({ isOpen, onClose, currentSlide }: SpeakerNote
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="bg-zinc-950/60 p-3.5 rounded-2xl border border-zinc-800 space-y-1">
               <strong className="text-emerald-400 block font-bold flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" /> 1. Transparência com os Números
+                <CheckCircle2 className="w-3.5 h-3.5" /> 1. O Tráfego Funciona
               </strong>
               <p className="text-zinc-400 text-[11px] leading-relaxed">
-                Mostre matematicamente por que R$ 1k em anúncios não faz R$ 10k sozinho. Proponha subir em degraus.
+                Mostre que o tráfego atrai pessoas com CPC de R$ 0,52 e 840 visitas ao site. O gargalo está na conversão dentro do cardápio digital.
               </p>
             </div>
 
             <div className="bg-zinc-950/60 p-3.5 rounded-2xl border border-zinc-800 space-y-1">
               <strong className="text-emerald-400 block font-bold flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" /> 2. Foco na Jornada do Delivery
+                <CheckCircle2 className="w-3.5 h-3.5" /> 2. Cardápio Limpo & Campeões
               </strong>
               <p className="text-zinc-400 text-[11px] leading-relaxed">
-                Pausa do WhatsApp foi essencial. O cliente de açaí decide rápido pelo cardápio com preço claro.
+                Reforce os dados da Saipos: 90%+ das vendas vêm de 4 itens. Menos opções = compra mais rápida no celular.
               </p>
             </div>
 
             <div className="bg-zinc-950/60 p-3.5 rounded-2xl border border-zinc-800 space-y-1">
               <strong className="text-emerald-400 block font-bold flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" /> 3. Combate à Sazonalidade
+                <CheckCircle2 className="w-3.5 h-3.5" /> 3. Fotos Reais sem IA
               </strong>
               <p className="text-zinc-400 text-[11px] leading-relaxed">
-                Deixar pronto o plano de contingência para dias frios (pastéis quentes por R$ 14 e salgados).
+                Acolha o feedback da Viviane: fotos reais dos produtos tiradas pelo Felipe Campezoni, com apetite appeal autêntico.
               </p>
             </div>
 
             <div className="bg-zinc-950/60 p-3.5 rounded-2xl border border-zinc-800 space-y-1">
               <strong className="text-emerald-400 block font-bold flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" /> 4. Parceria de Proatividade
+                <CheckCircle2 className="w-3.5 h-3.5" /> 4. Parceria de Execução
               </strong>
               <p className="text-zinc-400 text-[11px] leading-relaxed">
-                Taka e Viviane viajam bastante. Mantenha atualizações proativas por áudio e ligações curtas.
+                Kaiky ajustando a plataforma Saipos/Cypos, Felipe nas fotos e V4 na tração das campanhas e reuniões quinzenais.
               </p>
             </div>
           </div>

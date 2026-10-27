@@ -7,144 +7,238 @@ export interface SlideItem {
 }
 
 export const slidesList: SlideItem[] = [
-  { id: 1, slug: 'capa', tag: 'Abertura', title: 'Green Açaí • Apresentação Executiva' },
-  { id: 2, slug: 'diagnostico', tag: 'Diagnóstico', title: 'Realidade do Tráfego & Rebalizamento de Metas' },
-  { id: 3, slug: 'acao-imediata', tag: 'Pivot de Canais', title: 'Pausa do WhatsApp & Foco no Delivery' },
-  { id: 4, slug: 'cardapio-digital', tag: 'Cardápio Saipos', title: 'Engenharia de Conversão no Cardápio Digital' },
-  { id: 5, slug: 'criativos-contingencia', tag: 'Mídia & Conteúdo', title: 'Criativos com Preço & Contingência para Dias Frios' },
-  { id: 6, slug: 'ativacao-lago', tag: 'Branding & Comunidade', title: 'Lago Igapó, Público Infantil e Arenas' },
-  { id: 7, slug: 'proximos-passos', tag: 'Plano de Ação', title: 'Planilha de Próximos Passos & Balizamento' }
+  { id: 1, slug: 'capa', tag: 'Abertura', title: 'Ações Estratégicas - Green Açaí' },
+  { id: 2, slug: 'performance-trafego', tag: 'Performance Tráfego', title: 'Performance de Mídia & Funil do Cardápio (01/09 a 27/10)' },
+  { id: 3, slug: 'cardapio-campeoes', tag: 'Produtos Campeões', title: 'Otimização com Base nos Campeões (Saipos)' },
+  { id: 4, slug: 'diretrizes-cardapio', tag: 'Diretrizes Cardápio', title: 'Diretrizes Operacionais de Otimização do Cardápio' },
+  { id: 5, slug: 'criativos-novos', tag: 'Criativos com Preço', title: 'Novos Criativos com Preço Estampado' },
+  { id: 6, slug: 'proximos-passos', tag: 'Próximas Etapas', title: 'Próximas Etapas Alinhadas' }
 ];
 
+export const trafficPerformanceData = {
+  period: "01/09/2026 a 27/10/2026",
+  summary: {
+    totalSpent: 1227.95,
+    totalImpressions: 175053,
+    totalReach: 87352,
+    totalClicks: 1123,
+    landingPageViews: 840,
+    addToCart: 82,
+    checkoutsInitiated: 34,
+    purchasesTracked: 10,
+    purchaseConversionValue: 567.20
+  },
+  campaigns: [
+    {
+      name: "V4 | MANU | VENDAS | DELIVERY",
+      objective: "Conversão Direta para Cardápio Digital",
+      spent: 254.26,
+      impressions: 28658,
+      reach: 11218,
+      clicks: 491,
+      landingPageViews: 404,
+      addToCart: 6,
+      ctr: "1,71%",
+      cpc: "R$ 0,52",
+      status: "Pausada Temporariamente",
+      statusColor: "text-amber-400 bg-amber-500/10 border-amber-500/30",
+      highlight: "Excelente atratividade inicial do anúncio (CTR de 1,71% e CPC de R$ 0,52). Gerou 404 visitas ao cardápio com R$ 254 investidos. Pausada estrategicamente para não queimar verba enquanto o cardápio não for ajustado."
+    },
+    {
+      name: "[LF] [V4] [ONTIME] [VENDAS - DELIVERY] [14/07]",
+      objective: "Vendas Delivery (Pixel)",
+      spent: 742.66,
+      impressions: 77431,
+      reach: 25576,
+      clicks: 533,
+      landingPageViews: 422,
+      addToCart: 74,
+      checkouts: 33,
+      purchases: 10,
+      ctr: "0,69%",
+      cpc: "R$ 1,39",
+      status: "Histórico Concluído",
+      statusColor: "text-zinc-400 bg-zinc-800/40 border-zinc-700",
+      highlight: "Gerou 10 pedidos diretos rastreados (R$ 567,20 em conversão) e 74 adições ao carrinho com 422 acessos ao cardápio."
+    },
+    {
+      name: "V4 | MANU | RECONHECIMENTO",
+      objective: "Alcance & Presença de Marca Local",
+      spent: 9.23,
+      impressions: 8506,
+      reach: 8505,
+      clicks: 7,
+      cpc: "R$ 1,32",
+      status: "Ativa (R$ 12/dia)",
+      statusColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
+      highlight: "Mantém a marca aquecida e presente na região do Lago Igapó / Londrina com custo ínfimo sem depender da conversão do cardápio."
+    },
+    {
+      name: "Outras Campanhas (Alcance + WhatsApp)",
+      objective: "Alcance Institucional e Mensagens",
+      spent: 221.80,
+      impressions: 60458,
+      reach: 42053,
+      clicks: 92,
+      status: "Encerradas",
+      statusColor: "text-zinc-500 bg-zinc-900 border-zinc-800",
+      highlight: "Campanhas anteriores de alcance e testes de mensagens de WhatsApp encerradas para concentrar 100% da verba no cardápio próprio."
+    }
+  ],
+  funnelAnalysis: [
+    { step: "1. Impressões Meta Ads", volume: "175.053", desc: "Forte visibilidade em Londrina com CTR de até 1,71% e CPC de R$ 0,52.", status: "Excelente" },
+    { step: "2. Cliques no Link", volume: "1.123 cliques", desc: "O consumidor se interessa pela imagem e clica para fazer o pedido.", status: "Excelente" },
+    { step: "3. Abertura do Cardápio", volume: "840 visitas", desc: "840 pessoas abriram o cardápio digital para visualizar os produtos.", status: "Excelente" },
+    { step: "4. Adições ao Carrinho", volume: "82 adições", desc: "Queda brusca: complexidade e desorganização do cardápio dispersam 90% dos leads.", status: "Gargalo" },
+    { step: "5. Finalizações de Compra", volume: "34 checkouts / 10 compras", desc: "Apenas quem superou a barreira do menu confuso concluiu o pedido.", status: "Ação Pendente" }
+  ],
+  funnelDiagnosis: "O tráfego pago atrai o público certo a um custo muito vantajoso (CPC R$ 0,52 na campanha da Manu). Mais de 840 pessoas abriram o cardápio digital, mas a conversão cai por conta da complexidade do menu atual (24 itens soltos, ausência de fotos apetite appeal e falta de padronização nos tamanhos). A decisão de pausar a conversão e manter reconhecimento protege o caixa enquanto os ajustes operacionais são executados."
+};
+
 export const cardapioSalesData = {
-  period: "01/08 a 26/09",
-  totalVolume: 4060,
-  totalRevenue: 119703.05,
+  period: "01/09/2026 a 31/10/2026",
+  totalVolume: 14829,
+  totalRevenue: 324604.55,
+  totalCategories: 63,
+  totalRegisteredProducts: 314,
+  channels: "Entrega, Retirada, Salão e Ficha",
   rawTopItems: [
-    { name: "Açaí Grande", qty: 735, revenue: 27426.00, share: 18.103, category: "acai" },
-    { name: "Pastel de queijo", qty: 416, revenue: 6656.00, share: 10.246, category: "pastel" },
-    { name: "Casadinho Grande", qty: 372, revenue: 12920.00, share: 9.163, category: "casadinho" },
-    { name: "Açaí Médio", qty: 341, revenue: 10403.00, share: 8.399, category: "acai" },
-    { name: "Pastel de frango", qty: 231, revenue: 1845.69, share: 5.690, category: "pastel" },
-    { name: "Combo Green de Açaí", qty: 178, revenue: 10508.20, share: 4.384, category: "combo" },
-    { name: "Casadinho Médio", qty: 174, revenue: 4724.00, share: 4.286, category: "casadinho" },
-    { name: "1 Litro de Açaí", qty: 170, revenue: 7633.00, share: 4.187, category: "acai" },
-    { name: "Pastel de carne com queijo", qty: 138, revenue: 2484.00, share: 3.399, category: "pastel" },
-    { name: "Diversos - 2 Casadinhos Grandes (480ml)", qty: 112, revenue: 4480.00, share: 2.759, category: "combo" },
-    { name: "Diversos - Coxinha de frango com requeijão", qty: 77, revenue: 1934.00, share: 1.897, category: "salgado" },
-    { name: "Pastel de pizza", qty: 66, revenue: 1188.00, share: 1.626, category: "pastel" },
-    { name: "Pastel de carne", qty: 65, revenue: 1040.00, share: 1.601, category: "pastel" },
-    { name: "Diversos - Combo Sofá de Casa", qty: 63, revenue: 1883.70, share: 1.552, category: "combo" },
-    { name: "Salada de frutas frescas", qty: 52, revenue: 1529.50, share: 1.281, category: "saudavel" },
-    { name: "Pastel de frango com requeijão", qty: 46, revenue: 828.00, share: 1.133, category: "pastel" },
-    { name: "Açaí Pequeno", qty: 43, revenue: 1077.00, share: 1.059, category: "acai" },
-    { name: "Coca-Cola sem Açúcar Sleek 220ml", qty: 43, revenue: 172.00, share: 1.059, category: "bebida" },
-    { name: "Milk Shake de Morango", qty: 39, revenue: 916.00, share: 0.961, category: "shake" }
+    { name: "AMENDOIM DOCE - EXTERNA", qty: 1301, revenue: 4553.50, share: 8.773, category: "outros" },
+    { name: "AÇAÍ M (330ml)", qty: 1186, revenue: 34161.00, share: 7.998, category: "acai" },
+    { name: "Pastel Especial", qty: 899, revenue: 14390.00, share: 6.062, category: "pastel" },
+    { name: "Pastel Simples", qty: 716, revenue: 10024.00, share: 4.828, category: "pastel" },
+    { name: "ÁGUA 500ML", qty: 615, revenue: 3075.00, share: 4.147, category: "bebida" },
+    { name: "AÇAÍ G (550ml)", qty: 594, revenue: 21363.00, share: 4.006, category: "acai" },
+    { name: "AÇAÍ P (240ml)", qty: 573, revenue: 13063.00, share: 3.864, category: "acai" },
+    { name: "Açaí Grande", qty: 568, revenue: 21149.00, share: 3.830, category: "acai" },
+    { name: "Água de Coco", qty: 536, revenue: 6968.00, share: 3.615, category: "bebida" },
+    { name: "CASADINHO M (330ml)", qty: 484, revenue: 12244.00, share: 3.264, category: "casadinho" },
+    { name: "Diversos - Açaí", qty: 356, revenue: 10292.00, share: 2.401, category: "acai" },
+    { name: "Açaí Médio", qty: 339, revenue: 10271.00, share: 2.286, category: "acai" },
+    { name: "CASADINHO G (550ml)", qty: 320, revenue: 10645.00, share: 2.158, category: "casadinho" },
+    { name: "Casadinho Grande", qty: 283, revenue: 9953.00, share: 1.908, category: "casadinho" },
+    { name: "Pastel de frango", qty: 278, revenue: 2230.22, share: 1.875, category: "pastel" },
+    { name: "POTE 1L AÇAÍ - EXTERNA", qty: 238, revenue: 5236.00, share: 1.605, category: "acai" },
+    { name: "Pastel de carne com queijo", qty: 233, revenue: 4197.00, share: 1.571, category: "pastel" },
+    { name: "Pastel de queijo", qty: 230, revenue: 3680.00, share: 1.551, category: "pastel" },
+    { name: "CASADINHO P (240ml)", qty: 210, revenue: 4300.00, share: 1.416, category: "casadinho" },
+    { name: "ÁGUA C/ GÁS 500ML", qty: 181, revenue: 905.00, share: 1.221, category: "bebida" },
+    { name: "Diversos - Casadinho", qty: 152, revenue: 3933.00, share: 1.025, category: "casadinho" },
+    { name: "Combo Green de Açaí", qty: 149, revenue: 8901.10, share: 1.005, category: "combo" },
+    { name: "1 Litro de Açaí", qty: 138, revenue: 6196.20, share: 0.931, category: "acai" },
+    { name: "Casadinho Médio", qty: 124, revenue: 3546.00, share: 0.836, category: "casadinho" },
+    { name: "Salada de Frutas Médio", qty: 85, revenue: 1932.00, share: 0.573, category: "saudavel" },
+    { name: "Milk Chocolove 300ml", qty: 85, revenue: 1700.00, share: 0.573, category: "shake" }
   ],
   consolidatedArchitecture: [
     {
-      title: "Açaí Tradicional",
-      description: "Unificação de Açaí Grande (735 un), Médio (341 un) e Pequeno (43 un). O cliente escolhe o tamanho (P, M, G) e os adicionais por dentro.",
-      totalSales: 1119,
-      revenueGenerated: 38906.00,
-      benefit: "Reduz 3 produtos repetidos para 1 título limpo e atrativo."
-    },
-    {
-      title: "Pastel Crocante",
-      description: "Unificação de Queijo (416 un), Frango (231 un), Carne c/ Queijo (138 un), Pizza (66 un), Carne (65 un) e Frango c/ Requeijão (46 un).",
-      totalSales: 962,
-      revenueGenerated: 14041.69,
-      benefit: "Reduz 6 produtos soltos para 1 cardápio limpo com escolha de recheio por dentro."
+      title: "Açaí Tradicional (Copos P, M, G)",
+      description: "Unificação de AÇAÍ M (1.186 un), Açaí Grande (568 un), AÇAÍ G (594 un), AÇAÍ P (573 un), Açaí Médio (339 un) e Diversos Açaí (356 un).",
+      totalSales: 3616,
+      revenueGenerated: 110299.00,
+      benefit: "Reduz 6 produtos repetidos que concorrem entre si no menu para 1 único produto limpo com escolha interna de tamanho (P 240ml, M 330ml, G 550ml)."
     },
     {
       title: "Casadinho (Açaí + Cupuaçu)",
-      description: "Unificação de Casadinho Grande (372 un) e Casadinho Médio (174 un) com escolha de tamanho e adicionais por dentro.",
-      totalSales: 546,
-      revenueGenerated: 17644.00,
-      benefit: "Destaque do segundo campeão de receita de forma objetiva."
+      description: "Unificação de CASADINHO M (484 un), CASADINHO G (320 un), Casadinho Grande (283 un), CASADINHO P (210 un), Diversos (152 un) e Médio (124 un).",
+      totalSales: 1573,
+      revenueGenerated: 44621.00,
+      benefit: "Segundo maior faturamento da casa (R$ 44,6k), hoje fragmentado em 6 cadastros soltos no cardápio."
     },
     {
-      title: "Combos Campeões de Ticket Alto",
-      description: "Combo Green de Açaí (178 un), 2 Casadinhos Grandes (112 un) e Combo Sofá de Casa (63 un) posicionados no topo do cardápio.",
-      totalSales: 353,
-      revenueGenerated: 16871.90,
-      benefit: "Eleva o Ticket Médio médio do delivery para a faixa de R$ 65+."
+      title: "Pastéis (Especiais, Simples & Crocantes)",
+      description: "Unificação de Pastel Especial (899 un), Pastel Simples (716 un), Frango (278 un), Carne c/ Queijo (233 un) e Queijo (230 un).",
+      totalSales: 2356,
+      revenueGenerated: 34521.22,
+      benefit: "Mais de 2.300 pastéis vendidos. Unifica em categorias claras com seleção de recheios por dentro."
     },
     {
-      title: "1 Litro de Açaí & Potes",
-      description: "Pote de 1 Litro puro para consumo familiar (170 un vendidas / R$ 7.633 faturados).",
-      totalSales: 170,
-      revenueGenerated: 7633.00,
-      benefit: "Mantém apenas o tamanho de maior rentabilidade, cortando potes intermediários sem saída."
+      title: "Pote 1 Litro (Família / Fábrica)",
+      description: "Unificação de Pote 1L Externa (238 un) e 1 Litro de Açaí (138 un) puro para consumo doméstico.",
+      totalSales: 376,
+      revenueGenerated: 11432.20,
+      benefit: "Faturamento expressivo de R$ 11,4k garantido por uma embalagem de alta saída e fácil logística."
     },
     {
-      title: "Salgados Complementares & Saudáveis",
-      description: "Coxinha de frango c/ requeijão (77 un) e Salada de frutas frescas (52 un) com fotos apetitosas.",
-      totalSales: 129,
-      revenueGenerated: 3463.50,
-      benefit: "Opções de contingência e público fitness sem sobrecarregar o menu."
+      title: "Hidratação & Bebidas (Água & Coco)",
+      description: "Água 500ml (615 un), Água de Coco (536 un) e Água com Gás 500ml (181 un).",
+      totalSales: 1332,
+      revenueGenerated: 10948.00,
+      benefit: "Venda complementar de conveniência de altíssima margem líquida para delivery e salão."
+    },
+    {
+      title: "Combos de Alto Ticket (Combo Green)",
+      description: "Combo Green de Açaí (149 un / R$ 8.901,10). Ticket médio unitário de R$ 59,73.",
+      totalSales: 149,
+      revenueGenerated: 8901.10,
+      benefit: "Posicionado no topo para ancoragem de preço e elevação do ticket médio no delivery."
     }
   ]
 };
 
+export const cardapioOptimizationGuidelines = [
+  {
+    number: "01",
+    tag: "LIMPEZA ESTRATÉGICA",
+    title: "Enxugamento de Itens sem Saída",
+    subtitle: "Eliminar a paralisia de escolha na tela do celular",
+    problem: "Cardápio com mais de 24 itens espalhados, sucos e potes com quase zero vendas, forçando o cliente a rolar a tela infinitamente e desistir da compra.",
+    solution: "Remover produtos de baixa rotação e focar 100% nos campeões de venda validados pelos R$ 324,6k da Saipos.",
+    action: "Kaiky desativar no sistema Saipos/Cypos os itens redundantes."
+  },
+  {
+    number: "02",
+    tag: "ARQUITETURA DE PRODUTO",
+    title: "Agrupamento de Variações DENTRO do Produto",
+    subtitle: "Títulos limpos sem repetição de tamanho no menu",
+    problem: "Açaí Grande, Médio e Pequeno cadastrados como 3 produtos isolados, além de cada sabor de pastel solto.",
+    solution: "Criar um único produto 'Açaí Tradicional' e 'Açaí Zero'. Ao clicar, o cliente seleciona o tamanho (P, M, G), acompanhamentos e adicionais por dentro da página.",
+    action: "Configurar variações e complementos internos no cardápio digital."
+  },
+  {
+    number: "03",
+    tag: "HIERARQUIA VISUAL",
+    title: "Posicionamento Estratégico de Seções",
+    subtitle: "Produtos campeões no topo absoluto da página",
+    problem: "Itens com menor margem ou itens aleatórios aparecendo antes dos campeões de faturamento.",
+    solution: "Ordem visual otimizada: 1º Açaí Tradicional & Combos de Alto Ticket, 2º Casadinho (Açaí + Cupuaçu), 3º Pote Família 1 Litro, 4º Pastéis Crocantes e Salgados.",
+    action: "Reordenar as categorias para que o cliente veja imediatamente os líderes de venda."
+  },
+  {
+    number: "04",
+    tag: "FOTOGRAFIA & APETITE APPEAL",
+    title: "Novas Fotos Reais de Alta Resolução",
+    subtitle: "Fotos reais sem aspecto artificial ou de IA",
+    problem: "Fotos antigas de potes com aspecto que parece inteligência artificial (apontado pela Viviane) ou imagens genéricas sem desejo.",
+    solution: "Fotos reais captadas pelo Felipe Campezoni, com produto em primeiro plano, textura cremosa visível e fundo levemente desfocado para dar destaque.",
+    action: "Felipe subir as fotos captadas no Drive e Kaiky atualizar no cardápio."
+  },
+  {
+    number: "05",
+    tag: "COPYWRITING DE CARDÁPIO",
+    title: "Descrições Claras Entre Título e Preço",
+    subtitle: "Informar qualidade e diferenciais da fabricação própria",
+    problem: "Produtos sem descrição ou com textos incompletos sobre acompanhamentos e pureza da polpa.",
+    solution: "Descrições objetivas destacando: 'Fabricação própria', 'Sem adição de açúcar', 'Xarope de guaraná selecionado' e ingredientes inclusos.",
+    action: "Inserir os textos de descrição padronizados em cada produto mantido."
+  }
+];
+
 export const slidesData = {
   slide1: {
-    badge: "KICKOFF & BALIZAMENTO ESTRATÉGICO 2026",
+    badge: "ALINHAMENTO ESTRATÉGICO • OUTUBRO 2026",
     headline: "Ações Estratégicas - Green Açaí",
-    subheadline: "Otimização de tráfego pago, reformulação do cardápio digital, plano de contingência para sazonalidade e ativação de comunidade no Lago Igapó.",
+    subheadline: "Performance real de tráfego pago, funil do cardápio digital, diretrizes de otimização operacional e plano de ação alinhado.",
     productHighlight: "Açaí de Fabricação Própria (Sem Açúcar Adicionado & Linha Zero)",
     location: "Lago Igapó – Londrina / PR",
     presenters: "Andreas Rocha Slonzo & Emanuele Cena (Time V4 Company)",
     audience: "Taka & Viviane (Proprietários Green Açaí)"
   },
   
-  slide2: {
-    tag: "DIAGNÓSTICO & TRANSPARÊNCIA",
-    title: "Entendendo os Números: Por que Rebalizar a Meta de Mídia?",
-    subtitle: "Demonstrativo matemático da capacidade do investimento atual (R$ 1.000/mês em Meta Ads) e o plano progressivo para escalar o faturamento de forma sustentável.",
-    initialExpectation: "R$ 10.000 de Faturamento com R$ 1.000 de Investimento",
-    realMetrics: {
-      grossInvestment: 1000,
-      taxPercent: 12,
-      netInvestment: 880,
-      avgTicket: 50,
-      requiredSales: 200,
-      targetCPA: 4.40,
-      currentAvgCPA: 45.00
-    },
-    takeaway: "Investir R$ 880 líquidos exigiria um CPA irreal de R$ 4,40 por venda. Precisamos rebalizar expectativas e subir a verba de mídia em degraus conforme o cardápio for otimizado."
-  },
-
-  slide3: {
-    tag: "DECISÃO ESTRATÉGICA IMEDIATA",
-    title: "Pausa do WhatsApp & Concentração 100% no Delivery Direto",
-    subtitle: "Pausamos imediatamente a campanha de mensagens via WhatsApp para conter desperdício de verba e canalizar todo o orçamento no site de pedidos.",
-    reasons: [
-      {
-        title: "Atendimento Complexo no Food",
-        desc: "Exige equipe dedicada respondendo em segundos. O consumidor de açaí quer clicar, ver o preço, escolher adicionais e concluir sem conversa.",
-        icon: "MessageSquareX",
-        status: "Pausado"
-      },
-      {
-        title: "Baixa Taxa de Conversão",
-        desc: "O bot gerou apenas 1 conversa com zero pedidos concluídos, consumindo saldo sem retorno direto de vendas.",
-        icon: "AlertTriangle",
-        status: "Custo Ineficiente"
-      },
-      {
-        title: "Foco Total no Cardápio Digital (Cypos/Saipos)",
-        desc: "Jornada sem atrito: o cliente entra no link, escolhe o tamanho do copo, seleciona os acompanhamentos e finaliza a compra com pagamento direto.",
-        icon: "CheckCircle2",
-        status: "Estratégia Principal"
-      }
-    ]
-  },
-
   slide4: {
-    tag: "ENGENHARIA DE CONVERSÃO MOBILE & DADOS SAIPOS",
-    title: "Otimização do Cardápio Digital com Base nos Produtos Campeões",
-    subtitle: "Análise dos dados reais de saída da Saipos (01/08 a 26/09: 4.060 itens e R$ 119.703,05): enxugamento drástico do menu, unificação de opções por dentro do produto e fotos atrativas.",
+    tag: "PRODUTOS CAMPEÕES & DADOS SAIPOS",
+    title: "Otimização com Base nos Produtos Campeões de Venda",
+    subtitle: "Análise dos dados reais de saída da Saipos (14.829 itens e R$ 324.604,55 em vendas de 01/09 a 31/10): foco exclusivo nos campeões para enxugar as 63 categorias e 314 produtos cadastrados.",
     improvements: [
       {
         title: "Manter Apenas os Campeões de Venda",
@@ -156,107 +250,54 @@ export const slidesData = {
       },
       {
         title: "Fotos Reais Focadas no Produto Campeão",
-        detail: "Imagens que comunicam exatamente o item de maior saída, despertando desejo imediato no clique com apoio do novo social media."
+        detail: "Imagens reais que comunicam exatamente o item de maior saída, despertando desejo imediato no clique com apoio do novo social media."
       },
       {
-        title: "Promoções Programadas & Validação de Plataforma",
-        detail: "Testar promoções programadas no Saipos para combos e, caso haja limitação técnica, avaliar migração estratégica de plataforma."
+        title: "Destaque de Combos de Alto Ticket",
+        detail: "Posicionar combos no topo para elevar o ticket médio do delivery para a faixa de R$ 65+."
       }
     ]
   },
-
-  slide5: {
-    tag: "MÍDIA & PRODUÇÃO DE CONTEÚDO",
-    title: "Criativos com Preço Estampado & Contingência de Dias Frios",
-    subtitle: "Estratégia de anúncios focada em clareza de valor e combate direto à sazonalidade de chuvas e queda de temperatura.",
-    strategies: [
-      {
-        title: "Anúncios com Preço & Copo Estampados",
-        desc: "Visual direto e claro (Açaí R$ 18, R$ 25). O cliente de delivery precisa saber o valor antes de clicar.",
-        type: "Campanha Principal de Vendas"
-      },
-      {
-        title: "Anúncios de Contingência (Dias Frios/Chuvosos)",
-        desc: "Ativação de criativos de salgados quentes (Pastel de queijo por R$ 14, coxinhas, fondue) para sustentar o faturamento quando o clima esfria.",
-        type: "Plano de Proteção do Caixa"
-      },
-      {
-        title: "Vídeos do Taka + Social Media",
-        desc: "Aproveitar o carisma do Taka em vídeos estilo 'review' e bastidores da fábrica de açaí de Londrina.",
-        type: "Branding & Retenção"
-      }
-    ]
-  },
-
-  slide6: {
-    tag: "BRANDING E COMUNIDADE LOCAL",
-    title: "Ativação Presencial no Lago Igapó & Público Infantil",
-    subtitle: "Estratégias para explorar a localização privilegiada da loja e transformar a marca no ponto de encontro de saúde e família de Londrina.",
-    pillars: [
-      {
-        title: "Ações no Lago Igapó (Corredores)",
-        desc: "Degustação de açaí em mini-copos para a galera do 'Corre de Terça' e eventos esportivos locais."
-      },
-      {
-        title: "Público Infantil (4 a 12 anos)",
-        desc: "O maior promotor do Green Açaí. Crianças trazem pais, avós e tios para a loja. Foco em experiência e itens kids."
-      },
-      {
-        title: "Expansão B2B & Arenas de Beach Tennis",
-        desc: "Modelo de quiosque modular em contêineres dentro de arenas esportivas e clubes de raquete."
-      }
-    ]
-  },
-
+  
   slide7: {
     tag: "PLANILHA DE TAREFAS & ALINHAMENTO",
     title: "Próximas Etapas Alinhadas",
-    subtitle: "Plano de trabalho prático e colaborativo com o stakeholder para execução das otimizações de cardápio, mídia e rito quinzenal.",
+    subtitle: "Plano de trabalho prático e colaborativo integrando Kaiky, Felipe Campezoni, Manu, Andreas, Taka e Viviane com prazos definidos.",
     tasks: [
       {
         id: 1,
-        task: "Reestruturação do Cardápio Digital: Separar e enxugar pelos melhores produtos campeões de venda.",
-        owner: "V4 Company + Stakeholder (Taka & Viviane)",
-        deadline: "Próximos 3 dias",
-        status: "Em Andamento",
-        note: "Operação conjunta na plataforma Saipos/Cypos para enxugar itens e agrupar variações",
-        badgeColor: "bg-amber-500/20 text-amber-400 border-amber-500/30"
+        task: "Ajuste Operacional do Cardápio (Saipos/Cypos): Enxugar itens sem saída, agrupar tamanhos (P, M, G) por dentro e ordenar seções com campeões no topo.",
+        owner: "Kaiky (Green Açaí) + Andreas (V4)",
+        deadline: "28/10 a 29/10",
+        status: "Em Andamento"
       },
       {
         id: 2,
-        task: "Atualização das Imagens e Descrições de cada produto mantido no cardápio.",
-        owner: "Time Green Açaí + V4 Company",
-        deadline: "Esta semana",
-        status: "Planejado",
-        note: "Fotos profissionais em alta resolução com textos atrativos e foco em conversão mobile",
-        badgeColor: "bg-blue-500/20 text-blue-400 border-blue-500/30"
+        task: "Envio das Fotos Finais Reais no Drive: Subir no Drive compartilhado as novas fotos reais de copos, montagem e pastéis (sem aspecto IA).",
+        owner: "Felipe Campezoni (Social Media)",
+        deadline: "Até 28/10",
+        status: "Planejado"
       },
       {
         id: 3,
-        task: "Produção dos Novos Criativos Estáticos e em Vídeo expondo o preço de forma clara.",
-        owner: "Emanuele Cena (Manu) / V4 + Social Media",
-        deadline: "Próxima semana",
-        status: "Planejado",
-        note: "Artes com copos/pastéis com valor explícito + reels de bastidores e review gravados com o Taka",
-        badgeColor: "bg-purple-500/20 text-purple-400 border-purple-500/30"
+        task: "Upload das Imagens & Novas Descrições no Cardápio: Inserir as fotos aprovadas e as descrições claras entre título e preço em cada produto mantido.",
+        owner: "Kaiky (Green Açaí) + Time V4",
+        deadline: "Até 30/10",
+        status: "Planejado"
       },
       {
         id: 4,
-        task: "Configuração dos Criativos de Contingência de Frio & Chuva (Pastéis Quentes e Salgados).",
-        owner: "Time V4 Company",
-        deadline: "Próxima semana",
-        status: "Planejado",
-        note: "Anúncios pré-configurados para ativação imediata em quedas de temperatura",
-        badgeColor: "bg-amber-500/20 text-amber-400 border-amber-500/30"
+        task: "Reativação da Campanha de Conversão com Criativo de Preço Estampado: Retomar a campanha de vendas com o anúncio vertical de preço visível (R$ 22,90).",
+        owner: "Emanuele Cena (Manu / V4)",
+        deadline: "02/11 (após cardápio pronto)",
+        status: "Planejado"
       },
       {
         id: 5,
-        task: "Confirmação e manutenção do rito de reuniões de Check-in Quinzenais.",
-        owner: "Andreas Rocha (V4) & Taka / Viviane",
-        deadline: "Recorrente (Quinzenal)",
-        status: "Confirmado",
-        note: "Acompanhamento contínuo dos números de pedidos, CPA, faturamento e balizamento da esteira",
-        badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
+        task: "Reuniões Periódicas de Check-in Quinzenais: Alinhamento contínuo de métricas, CPA, faturamento e novos testes de mídia.",
+        owner: "Andreas Rocha (V4) & Viviane / Taka",
+        deadline: "Recorrente (Próximo: 10/11)",
+        status: "Confirmado"
       }
     ]
   }
@@ -265,30 +306,26 @@ export const slidesData = {
 export const speakerNotesGuide = [
   {
     slide: 1,
-    tip: "Comece valorizando a trajetória de 12 anos da Green Açaí e a força da fabricação própria no Lago Igapó. Reforce: nosso objetivo é alinhar os próximos passos com total clareza e transparência."
+    tip: "Abertura objetiva: 'Hoje vamos passar a limpo a performance real das campanhas de 01/09 a 27/10, mostrar onde está o gargalo de conversão e alinhar as etapas práticas de cardápio e criativos'."
   },
   {
     slide: 2,
-    tip: "Explique com calma e sem sobressaltos a matemática do investimento: R$ 1k bruto vira R$ 880 líquidos. Para 10k de vendas com ticket de R$ 50, precisaria de 200 pedidos com CPA de R$ 4,40. Mostre o simulador de escala gradual de verba!"
+    tip: "Apresente os números reais da Meta: 'Alcançamos 87 mil pessoas e geramos 840 visitas ao cardápio com um CPC de apenas R$ 0,52. O tráfego funciona! O gargalo está na conversão dentro do cardápio, por isso pausamos as vendas para não queimar verba enquanto ajustamos o menu'."
   },
   {
     slide: 3,
-    tip: "Apresente a pausa do WhatsApp como uma vitória imediata de economia de verba: 'WhatsApp em food precisa de equipe em tempo real. O cliente de açaí quer entrar no site, ver o preço, escolher adicionais e fechar rápido'."
+    tip: "Mostre os R$ 119,7k da Saipos: 'O cardápio não precisa inventar moda. Açaí Tradicional, Casadinho, Pote 1L e Pastel representam 90%+ das vendas. Vamos manter só eles e agrupar variações'."
   },
   {
     slide: 4,
-    tip: "Mostre os dados reais da Saipos (4.060 itens / R$ 119,7k): 'Analisamos exatamente o que vende. Vamos manter somente os produtos campeões, agrupando tamanhos e sabores por dentro para o cardápio ficar limpo, rápido e fácil de comprar no celular!'."
+    tip: "Explique os 5 pontos práticos alinhados com o Kaiky e Felipe no WhatsApp: enxugamento, agrupamento por dentro, seções campeãs no topo, fotos reais sem IA e descrições claras."
   },
   {
     slide: 5,
-    tip: "Mostre os criativos com PREÇO e o plano de frio! 'Londrina tem sazonalidade climática. Quando esfriar ou chover, já deixamos rodando os anúncios do pastel de queijo (R$ 14) e produtos quentes'."
+    tip: "Mostre o novo anúncio vertical com preço estampado: 'O cliente já clica sabendo o preço (R$ 22,90), o que qualifica o clique e reduz o custo por pedido'."
   },
   {
     slide: 6,
-    tip: "Elogie o Taka na gravação de conteúdos e valorize o público infantil (4-12 anos): 'A criança traz os pais, avós e tios. E no Lago Igapó podemos fazer degustação para a galera que corre na terça'."
-  },
-  {
-    slide: 7,
-    tip: "Mostre a planilha de tarefas exata que foi combinada. Destaque o que JÁ FOI REALIZADO (pausa do WhatsApp) e pegue a validação do Taka e da Viviane para o próximo ciclo de 07/10."
+    tip: "Feche com a planilha de responsáveis: Kaiky ajustando a plataforma, Felipe subindo as fotos reais, Manu reativando o tráfego com o novo criativo e rito quinzenal confirmado!"
   }
 ];
