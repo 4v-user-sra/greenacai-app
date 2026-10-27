@@ -15,84 +15,100 @@ export const slidesList: SlideItem[] = [
   { id: 6, slug: 'proximos-passos', tag: 'Próximas Etapas', title: 'Próximas Etapas Alinhadas' }
 ];
 
-export const trafficPerformanceData = {
-  period: "01/09/2026 a 27/10/2026",
-  summary: {
-    totalSpent: 1227.95,
-    totalImpressions: 175053,
-    totalReach: 87352,
-    totalClicks: 1123,
-    landingPageViews: 840,
-    addToCart: 82,
-    checkoutsInitiated: 34,
-    purchasesTracked: 10,
-    purchaseConversionValue: 567.20
+export const trafficComparisonData = {
+  previousPeriod: {
+    period: "01/10/2026 a 14/10/2026",
+    label: "Período Anterior (Estrutura Antiga)",
+    campaignName: "[LF] [V4] [ONTIME] [VENDAS - DELIVERY] [14/07]",
+    spent: 344.25,
+    impressions: 35894,
+    reach: 14313,
+    clicks: 225,
+    cpc: 1.53,
+    ctr: 0.63,
+    landingPageViews: 173,
+    addToCart: 17,
+    checkouts: 8,
+    purchases: 2,
+    conversionValue: 121.00,
+    roas: 0.35,
+    status: "Encerrada",
+    statusColor: "text-zinc-400 bg-zinc-800/50 border-zinc-700",
+    summary: "Tráfego mais caro e menor engajamento criativo. Gerava cliques a R$ 1,53 com CTR de 0,63%. Retornou apenas R$ 121 em vendas para R$ 344 gastos (ROAS 0,35x)."
   },
-  campaigns: [
+  newPeriod: {
+    period: "15/10/2026 a 27/10/2026",
+    label: "Período com Implementações V4 (Campanha Manu)",
+    campaignName: "V4 | MANU | VENDAS | DELIVERY",
+    spent: 254.26,
+    impressions: 28658,
+    reach: 11218,
+    clicks: 491,
+    cpc: 0.52,
+    ctr: 1.71,
+    landingPageViews: 404,
+    addToCart: 6,
+    purchases: 0,
+    conversionValue: 0.00,
+    roas: 0.00,
+    status: "Pausada Preventivamente",
+    statusColor: "text-amber-400 bg-amber-500/10 border-amber-500/30",
+    summary: "Forte ganho de atratividade: CTR quase triplicou (+173%) e o CPC despencou 66% (de R$ 1,53 para R$ 0,52). Mais de 404 pessoas levadas ao cardápio com menos verba investida. Pausada para não queimar caixa enquanto o cardápio não for ajustado."
+  },
+  activeBrandingCampaign: {
+    period: "15/10/2026 a 27/10/2026 (Ativa Agora)",
+    label: "Campanha Ativa: Foco em Experiência & Presença de Marca",
+    campaignName: "V4 | MANU | RECONHECIMENTO",
+    budget: "R$ 12,00 / dia",
+    spent: 11.13,
+    impressions: 10054,
+    reach: 9768,
+    cpm: 1.14,
+    status: "Ativa (R$ 12/dia)",
+    statusColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
+    objective: "Experiência de Marca no Lago Igapó / Londrina",
+    rationale: "Como não estamos focando em retorno de venda imediato — para não gastar o dinheiro do cliente à toa com um cardápio ainda não otimizado —, mantemos essa campanha rodando para gerar lembrança de marca e experiência local com custo mínimo (R$ 1,14 a cada 1.000 pessoas alcançadas)."
+  },
+  kpiComparison: [
     {
-      name: "V4 | MANU | VENDAS | DELIVERY",
-      objective: "Conversão Direta para Cardápio Digital",
-      spent: 254.26,
-      impressions: 28658,
-      reach: 11218,
-      clicks: 491,
-      landingPageViews: 404,
-      addToCart: 6,
-      ctr: "1,71%",
-      cpc: "R$ 0,52",
-      status: "Pausada Temporariamente",
-      statusColor: "text-amber-400 bg-amber-500/10 border-amber-500/30",
-      highlight: "Excelente atratividade inicial do anúncio (CTR de 1,71% e CPC de R$ 0,52). Gerou 404 visitas ao cardápio com R$ 254 investidos. Pausada estrategicamente para não queimar verba enquanto o cardápio não for ajustado."
+      metric: "Custo por Clique (CPC)",
+      previous: "R$ 1,53",
+      current: "R$ 0,52",
+      change: "-66%",
+      improved: true,
+      insight: "Redução drástica no custo de aquisição do tráfego."
     },
     {
-      name: "[LF] [V4] [ONTIME] [VENDAS - DELIVERY] [14/07]",
-      objective: "Vendas Delivery (Pixel)",
-      spent: 742.66,
-      impressions: 77431,
-      reach: 25576,
-      clicks: 533,
-      landingPageViews: 422,
-      addToCart: 74,
-      checkouts: 33,
-      purchases: 10,
-      ctr: "0,69%",
-      cpc: "R$ 1,39",
-      status: "Histórico Concluído",
-      statusColor: "text-zinc-400 bg-zinc-800/40 border-zinc-700",
-      highlight: "Gerou 10 pedidos diretos rastreados (R$ 567,20 em conversão) e 74 adições ao carrinho com 422 acessos ao cardápio."
+      metric: "Taxa de Cliques (CTR)",
+      previous: "0,63%",
+      current: "1,71%",
+      change: "+173%",
+      improved: true,
+      insight: "Criativo muito mais atrativo para o consumidor de Londrina."
     },
     {
-      name: "V4 | MANU | RECONHECIMENTO",
-      objective: "Alcance & Presença de Marca Local",
-      spent: 9.23,
-      impressions: 8506,
-      reach: 8505,
-      clicks: 7,
-      cpc: "R$ 1,32",
-      status: "Ativa (R$ 12/dia)",
-      statusColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
-      highlight: "Mantém a marca aquecida e presente na região do Lago Igapó / Londrina com custo ínfimo sem depender da conversão do cardápio."
+      metric: "Volume de Cliques no Link",
+      previous: "225 cliques",
+      current: "491 cliques",
+      change: "+118%",
+      improved: true,
+      insight: "Mais do que o dobro de cliques com menos verba gasta."
     },
     {
-      name: "Outras Campanhas (Alcance + WhatsApp)",
-      objective: "Alcance Institucional e Mensagens",
-      spent: 221.80,
-      impressions: 60458,
-      reach: 42053,
-      clicks: 92,
-      status: "Encerradas",
-      statusColor: "text-zinc-500 bg-zinc-900 border-zinc-800",
-      highlight: "Campanhas anteriores de alcance e testes de mensagens de WhatsApp encerradas para concentrar 100% da verba no cardápio próprio."
+      metric: "Acessos ao Cardápio Digital",
+      previous: "173 visitas",
+      current: "404 visitas",
+      change: "+133%",
+      improved: true,
+      insight: "Mais de 400 clientes levados diretamente para a compra."
     }
   ],
-  funnelAnalysis: [
-    { step: "1. Impressões Meta Ads", volume: "175.053", desc: "Forte visibilidade em Londrina com CTR de até 1,71% e CPC de R$ 0,52.", status: "Excelente" },
-    { step: "2. Cliques no Link", volume: "1.123 cliques", desc: "O consumidor se interessa pela imagem e clica para fazer o pedido.", status: "Excelente" },
-    { step: "3. Abertura do Cardápio", volume: "840 visitas", desc: "840 pessoas abriram o cardápio digital para visualizar os produtos.", status: "Excelente" },
-    { step: "4. Adições ao Carrinho", volume: "82 adições", desc: "Queda brusca: complexidade e desorganização do cardápio dispersam 90% dos leads.", status: "Gargalo" },
-    { step: "5. Finalizações de Compra", volume: "34 checkouts / 10 compras", desc: "Apenas quem superou a barreira do menu confuso concluiu o pedido.", status: "Ação Pendente" }
-  ],
-  funnelDiagnosis: "O tráfego pago atrai o público certo a um custo muito vantajoso (CPC R$ 0,52 na campanha da Manu). Mais de 840 pessoas abriram o cardápio digital, mas a conversão cai por conta da complexidade do menu atual (24 itens soltos, ausência de fotos apetite appeal e falta de padronização nos tamanhos). A decisão de pausar a conversão e manter reconhecimento protege o caixa enquanto os ajustes operacionais são executados."
+  financialConclusion: {
+    totalSpentPeriods: 609.64,
+    totalRevenueTracked: 121.00,
+    overallDeficit: -488.64,
+    takeaway: "Transparência Total: Ambos os períodos tiveram retorno financeiro negativo (no primeiro período foram R$ 344 gastos para R$ 121 retornados; no segundo, as 404 visitas dispersaram no cardápio desestruturado). No entanto, as melhorias operacionais nos indicadores de mídia (CPC de R$ 0,52 e CTR de 1,71%) comprovam que a atração foi corrigida com sucesso. O único gargalo pendente para destravar o retorno financeiro é a otimização do cardápio digital."
+  }
 };
 
 export const cardapioSalesData = {
